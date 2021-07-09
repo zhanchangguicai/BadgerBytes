@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: url('index.jpg');
+      }
+      .button {
+        border: none;
+        border-radius: 80px;
+        width: 40%;
+        height: 8%;
+        position: absolute;
+        background-color:dodgerblue;
+        color:rgb(255, 255, 255);
+        left: 50%;
+        font-size: 30px;
+        cursor: pointer;
+        transform: translateX(-50%);
+      }
+      #titleId{
+        margin-top: 0%;
+        text-align: center;
+        color:rgb(255, 0, 0);
+        font-size: 60px;
+        font-family:Trattatello, fantasy; 
+      }
+      body{
+        background: url('img/index.jpg') ; 
+        background-size:100% 100% ; 
+        background-attachment: fixed；
+      }
+    </style>
+  </head>
+  <body>
+    <div id="titleId">BadgerBytes</div>
+    <a href="./customerLogin.html">
+      <button class="button" style="top: 40%">Login Customer</button>
+    </a>
+    <a href="./staffLogin.html">
+      <button class="button" style="top: 55%">Login Staff</button>
+    </a>
+  </body>
+</html>

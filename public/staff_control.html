@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cart.css">
+	<title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      .wrap {
+        width: 100%;
+      }
+
+     	  
+	  .headerMenu{
+		  width: 100%;
+		  background: url('img/cart.jpg') -803px -868px no-repeat ; 
+	  }
+	  
+	  .content {
+	    padding: 0 40px 30px;
+	    width:100%;
+	    border-right: 1px solid black;
+	  }
+
+
+        .goodsList{
+          width: 60%;
+		  float: left;
+          --background-color: antiquewhite;
+		  border-right: 1px solid black;
+        }
+        .goods{
+          margin: 5pt;
+          float: left;
+          width: 200pt;
+          background-color:aliceblue;
+        }
+        .goodsPic{
+          height: 150pt;
+          width: 200pt;
+        }
+        .goodsDesc{
+           height: 30pt;
+           --background-color: aliceblue;
+        }
+        .goodsprice{
+          
+          margin-top: 2pt;
+          height: 20pt;
+          color:red;
+          --background-color: beige;
+        }
+        .goodsAddToCartBtn{
+          float:right;
+          --width: 30pt;
+          height: 20pt;
+          font-size: 10pt;
+          margin-top: 2pt;
+        }
+
+        .cannotAdd{
+          background-color: darkgray;
+        }
+
+        .modifyInfoBtn{
+          width: 100pt;
+          margin-top: 10pt;
+          background-color: #DEB887;
+          height: 30pt;
+        }
+
+     
+        
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="wrap">
+		<div class="headerMenu">
+			<h1 style="text-align: center;" id="title"> Menu </h1>
+      <button style="font-size: 15pt;float: right;display:inline-block; width: 120pt;margin-top: 30pt; height: 30pt;" id="manageOrder">manage order</button>
+		</div>
+
+      <div class="content">
+       
+        <div class="goodsList" id="goodsList"></div>
+		  
+
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js"></script>
+    <script type="text/javascript" src="js/firebase_init.js"></script>
+    <script type="text/javascript" src="js/staff_control.js"></script>
+    <script type="text/javascript" src="js/unpaid_order.js"></script>
+  </body>
+</html>

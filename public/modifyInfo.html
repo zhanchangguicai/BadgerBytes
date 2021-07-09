@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        --background-color: aqua;
+        width: 1000pt;
+        align-content: center;
+        align-self: center;
+      }
+      .titleClass{
+        --float: left;
+        position: relative;
+        text-align: center;
+        --background-color: antiquewhite;
+        width: 100%;
+        font-size: 30pt;
+        left: 50%;
+        font-family:Comic Sans MS;
+        transform: translate(-50%, -50%);
+      }
+      .leftPanel{
+        float: left;
+        --background-color: antiquewhite;
+      }
+      .rightPanel{
+        float: left;
+        --background-color:burlywood;
+        padding-left: 5pt;
+      
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15pt;
+        margin-bottom: 10pt;
+        margin-left: 10pt;
+      }
+
+      input {
+        padding: 7pt 15pt;
+        border-radius: 3pt;
+        margin: 1pt;
+        width: 330pt;
+      }
+
+      button {
+        padding: 8pt;
+        border:none;
+        border-radius: 10pt;
+        background-color:darkgrey;
+        color: white;
+        font-size: 20pt;
+        margin-top: 10pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      
+        <div class="titleClass">MODIFY INFO</div>
+    
+      <div class="leftPanel">
+        <img src="img/registLeftBg.jpg" height="500pt"/>
+      </div>
+      <div class="rightPanel">
+      <form class="form">
+        <div class="wrapper">Username<input type="text" id="username"/></div>
+        <div class="wrapper">Password<input type="password" id="password"/></div>
+        <div class="wrapper">Password Check<input type="password" id="password_check"/></div>
+        <div class="wrapper">Email<input type="email" id="email"/></div>
+        <div class="wrapper">Phone<input type="text" id="phone"/></div>
+        <div class="wrapper">First name<input type="text" id="first_name"/></div>
+        <div class="wrapper">Last name<input type="text" id="last_name"/></div>
+        <div class="wrapper">Address<input type="text" id="address"/></div>
+        <div class="wrapper">State<input type="text" id="state"/></div>
+        <div class="wrapper">Zipcode<input type="text" id="zipcode"/></div>
+      </form>
+      
+    </div>
+      <button style="width: 100%" id="save">Save</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js"></script>
+    <script type="text/javascript" src="js/firebase_init.js"></script>
+    <script type="text/javascript" src="js/modifyInfo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:darkslategrey;
+        padding: 5%;
+        border: none;
+        border-radius: 5px;
+        color: white;
+
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      input {
+        padding: 7px 15px;
+      }
+
+      a {
+        font-size: 16px;
+        color: bisque;
+      }
+
+      button {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: blue;
+        font-size:15pt;
+      }
+      body{
+        background: url('img/loginStaff.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <form class="form">
+        <div class="wrapper">Username<input type="text" id="username"/></div>
+        <div class="wrapper">Password<input type="password" id="password"/></div>
+        <div class="wrapper">
+        </div>
+      </form>
+      <button style="width: 100%" id="login">Login</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js"></script>
+    <script type="text/javascript" src="js/firebase_init.js"></script>
+    <script type="text/javascript" src="js/staff_admin_sign_in.js"></script>
+  </body>
+</html>

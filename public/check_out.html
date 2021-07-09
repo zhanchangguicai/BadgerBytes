@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/cart.css">
+	<title>Document</title>
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+
+		.wrap {
+			width: 80%;
+			height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			--background-color: #00FFFF;
+		}
+
+		#card_check {
+			text-align: center;
+			margin-top: 30px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="wrap">
+		<h1>Cart</h1>
+		<div class="cartGoodsList" style="width: 100%;">
+			<table>
+				<thead>
+					<tr>
+						<th>name</th>
+						<th>price</th>
+						<th>count</th>
+						<th>total price</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+				</tbody>
+			</table>
+
+			<table style="margin-top: 10pt;">
+				<thead></thead>
+				<tr>
+					<th>total price</td>
+					<td>$<span id="totalPrice"></span></th>
+				</tr>
+				</thead>
+			</table>
+
+
+			<style>
+				form>label {
+					width: 100pt;
+					display: inline-flex;
+					margin-top: 10pt;
+				}
+
+				form>select,
+				form>textarea {
+					width: 100%;
+				}
+			</style>
+			<div id="card_check">
+				<div style="float: left;">payment method:</div>
+				<a class="card_collection" id="paypal"><img
+						src="img/card_collection.png"
+						alt="card"></a>
+			</div>
+			<div>
+				<form action="" method="">
+					
+					<label>Pickup Time</label>
+					<select id="pickUpTime">
+						<option>30 minutes later</option>
+						<option>45 minutes later</option>
+						<option>60 minutes later</option>
+					</select>
+					<label>Car Description</label>
+					<textarea id="carDescription">
+
+					</textarea>
+
+				</form>
+			</div>
+
+
+			<button class="checkOutBtn" id="checkOut">Print Receipt</button>
+
+		</div>
+<script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js"></script>
+    <script type="text/javascript" src="js/firebase_init.js"></script>
+	<script type="text/javascript" src="js/dynamic_check_out.js"></script>
+</body>
+
+</html>
